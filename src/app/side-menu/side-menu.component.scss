@@ -1,0 +1,45 @@
+.aside-container {
+  min-height: 100%;
+  background-color: #345;
+  padding-top: 10px;
+
+  & .logo {
+    margin: 0 0 40px;
+    text-align: center;
+    color: blue;
+    font-size: 48px;
+  }
+
+  & ul {
+    list-style-type: none;
+
+    & li {
+      font-size: 18px;
+      margin-bottom: 10px;
+
+      & i {
+        width: 32px;
+        color: #ccc;
+      }
+    }
+
+    & a {
+      color: #ccc;
+    }
+    & .active a, & .active i {
+      color: white;
+    }
+  }
+
+  & .progress-container {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    padding: 5%;
+
+    & .size-info {
+      color: white;
+    }
+  }
+}
+

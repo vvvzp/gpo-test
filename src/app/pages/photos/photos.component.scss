@@ -1,0 +1,29 @@
+.sort-container {
+  text-align: right;
+}
+
+.content-container {
+  & .item-container {
+    width: 200px;
+    height: 250px;
+    display: inline-block;
+    margin: 20px;
+
+    & .img-container {
+      height: 200px;
+      overflow: hidden;
+      & img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    [grey] {
+      color: #ccc;
+    }
+    & p {
+      margin: 0;
+    }
+  }
+}

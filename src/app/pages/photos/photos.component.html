@@ -1,0 +1,18 @@
+<h4>Photos</h4>
+<div class="sort-container">
+    <button type="button" class="btn" (click)="changeSortType(1)" [ngClass]="sortType === 1 ? 'btn-secondary': 'btn-light'">Name</button>
+    <button type="button" class="btn" (click)="changeSortType(2)" [ngClass]="sortType === 2 ? 'btn-secondary': 'btn-light'">Size</button>
+    <button type="button" class="btn" (click)="changeSortType(3)" [ngClass]="sortType === 3 ? 'btn-secondary': 'btn-light'">Modify</button>
+</div>
+<div class="content-container">
+    <div class="item-container" *ngFor="let img of sortedList">
+        <div class="img-container">
+            <img [src]="img.url" alt="image">
+        </div>
+        <p>{{img.name}}</p>
+        <p grey>{{img.size | filesize}}</p>
+        <p grey>{{img.lastModify*1000 | date}}</p>
+    </div>
+
+</div>
+

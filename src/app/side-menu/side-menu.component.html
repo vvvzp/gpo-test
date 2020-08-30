@@ -1,0 +1,18 @@
+<div class="aside-container">
+    <div class="logo">
+        <i class='fas fa-radiation'></i>
+    </div>
+
+    <ul>
+        <li *ngFor="let item of menu" [ngClass]="item.route === activeLink ? 'active' : ''">
+            <i class='fas' [ngClass]="item.ico"></i>
+            <a [routerLink]="item.route" (click)="setActiveRoute(item.route)">
+                {{item.name}}
+            </a>
+        </li>
+    </ul>
+    <div class="progress-container" *ngIf="totalSize">
+        <p class="size-info">{{totalSize | filesize}}/{{maxSize | filesize}} ( {{percent}}% ) </p>
+        <p><ngb-progressbar type="info" [value]="percent"></ngb-progressbar></p>
+    </div>
+</div>

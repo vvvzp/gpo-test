@@ -1,0 +1,21 @@
+.container {
+  margin: 0;
+  height: 100%;
+
+  & .row {
+    height: 100%;
+
+    & .col {
+      padding: 0;
+    }
+
+    & .col.aside {
+      max-width: 250px;
+    }
+
+    & .col.scroll {
+      height: 100%;
+      overflow-y: scroll;
+    }
+  }
+}
